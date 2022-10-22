@@ -1,0 +1,10 @@
+M = int(input())
+setM = set(list(map(int,input().split())))
+N = int(input())
+setN = set(list(map(int,input().split())))
+dM = setM.difference(setN)
+dN = setN.difference(setM)
+d = dM.union(dN)
+d = sorted(d)
+for x in d:
+    print(x)
