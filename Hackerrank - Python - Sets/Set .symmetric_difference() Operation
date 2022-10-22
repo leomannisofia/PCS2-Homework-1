@@ -1,0 +1,5 @@
+e = int(input())
+eng = set(input().split())
+f = int(input())
+fre = set(input().split())
+print(len(eng.symmetric_difference(fre)))
