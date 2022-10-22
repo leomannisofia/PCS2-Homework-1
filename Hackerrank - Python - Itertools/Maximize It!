@@ -1,0 +1,7 @@
+from itertools import product
+K, M = map(int, input().split())
+l = []
+for x in range(K):
+    l.append(list(map(int, input().split()[1:])))
+s = [sum([pow(y,2) for y in i])%M for i in product(*l)]
+print(max(s))
