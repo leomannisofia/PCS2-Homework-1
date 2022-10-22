@@ -1,0 +1,10 @@
+from collections import OrderedDict
+N, np =  int(input()), OrderedDict()
+for x in range(N):
+    item_name, blank, price = input().rpartition(' ')
+    if item_name in np:
+        np[item_name] += int(price)
+    else:
+        np[item_name] = int(price)
+for x in np.items():
+    print(*x)  
