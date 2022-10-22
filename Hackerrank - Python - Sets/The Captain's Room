@@ -1,0 +1,9 @@
+K = int(input())
+rooms = list(map(int, input().split()))
+rs = set(rooms)
+for x in list(rs):
+    rooms.remove(x)
+rs2 = set(rooms)
+rs3 = rs.difference(rs2)
+for x in rs3:
+    print(x)
