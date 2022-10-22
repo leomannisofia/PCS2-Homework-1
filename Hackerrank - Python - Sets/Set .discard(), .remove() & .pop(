@@ -1,0 +1,12 @@
+n = int(input())
+s = set(map(int, input().split()))
+N = int(input())
+for x in range(N):
+    comm = input().split()
+    if comm[0] == "pop":
+        s.pop()
+    elif comm[0] == "remove":
+        s.remove(int(comm[1]))
+    elif comm[0] == "discard":
+        s.discard(int(comm[1]))
+    print(sum(s))
