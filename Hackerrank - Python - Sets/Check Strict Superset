@@ -1,0 +1,6 @@
+A = set(map(int, input().split()))
+s = set()
+for x in range(int(input())):
+    N = set(map(int, input().split()))
+    s.update(N)
+print(A.issuperset(s))
