@@ -1,0 +1,11 @@
+from collections import OrderedDict
+n = int(input())
+out = OrderedDict()
+for x in range(n):
+    y = input()
+    if y in out:
+        out[y] += 1
+    else:
+        out[y] = 1
+print(len(out))
+print(*out.values())
