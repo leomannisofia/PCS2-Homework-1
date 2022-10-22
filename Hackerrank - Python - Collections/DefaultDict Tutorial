@@ -1,0 +1,12 @@
+from collections import defaultdict
+d = defaultdict(list)
+n, m = map(int,input().split())
+for x in range(n):
+    a = input().rstrip()
+    d[a].append(x+1)
+for y in range(m):
+    b = input().rstrip()
+    if b in d:
+        print(' '.join(map(str,d[b])))
+    else:
+        print('-1')
