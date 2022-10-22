@@ -1,0 +1,12 @@
+def print_formatted(number):
+    space = len(bin(number))-2
+    for i in range(number):
+        decimal = str(i+1)
+        octal = str(oct(i+1))
+        hexadec = str(hex(i+1))
+        binary = str(bin(i+1))
+        print(decimal.rjust(space), octal[2:].rjust(space), hexadec[2:].upper().rjust(space), binary[2:].rjust(space))
+
+if __name__ == '__main__':
+    n = int(input())
+    print_formatted(
