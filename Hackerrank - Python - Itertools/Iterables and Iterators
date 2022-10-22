@@ -1,0 +1,9 @@
+from itertools import combinations
+n, s, k = int(input()), input().split(), int(input())
+c = combinations(s, k)
+num = a=0
+for x in c:
+    a += 1
+    if 'a' in x:
+        num += 1
+print('{:.3f}'.format(num/a))
