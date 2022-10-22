@@ -1,0 +1,15 @@
+def print_rangoli(size):
+    abc = "abcdefghijklmnopqrstuvwxyz"
+    string = []
+    for x in range(size):
+        stri = "-".join(abc[x:size])
+        string.append(stri[::-1] + stri[1:])
+    width = len(string[0])
+    for x in range(size-1, 0, -1):
+        print(string[x].center(width, "-"))
+    for x in range(size):
+        print(string[x].center(width, "-"))
+
+if __name__ == '__main__':
+    n = int(input())
+    print_rangoli(n)
