@@ -1,0 +1,13 @@
+from collections import Counter
+n, l, costumers = int(input()), input().split(" "), int(input())
+d = Counter(l)
+earn = []
+loss =[]
+for x in range(costumers):
+    sm = input().split(" ")
+    if sm[0] in d and d[sm[0]]>0:
+        earn.append(int(sm[1]))
+        d[sm[0]] = d[sm[0]]-1
+    elif d[sm[0]] <= 0:
+        loss.append(int(sm[1]))
+print(sum(earn))
