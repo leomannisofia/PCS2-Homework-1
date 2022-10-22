@@ -1,0 +1,12 @@
+def merge_the_tools(string, k):
+    n = len(string)
+    for x in range(0, n, k):
+        lines = ""
+        for j in range(k):
+            if string[x+j] not in lines:
+                lines += string[x+j]
+        print(lines)
+
+if __name__ == '__main__':
+    string, k = input(), int(input())
+    merge_the_tools(string, k)
