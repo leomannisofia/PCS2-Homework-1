@@ -1,0 +1,14 @@
+from collections import deque
+N = int(input())
+d = deque()
+for x in range(N):
+    comm = input().split()
+    if comm[0] == 'append':
+        d.append(int(comm[1]))
+    elif comm[0] == 'pop':
+        d.pop()
+    elif comm[0] == 'popleft':
+        d.popleft()
+    elif comm[0] == 'appendleft':
+        d.appendleft(int(comm[1]))
+print(*d)
