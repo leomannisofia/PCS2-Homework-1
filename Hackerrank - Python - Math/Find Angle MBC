@@ -1,0 +1,6 @@
+import math
+AB = int(input())
+BC = int(input())
+M = math.sqrt((pow(AB,2)+(pow(BC,2))))
+MBC = math.acos(BC/M)
+print(int(round(math.degrees(MBC),0)),u'\N{DEGREE SIGN}',sep='')
