@@ -1,0 +1,6 @@
+from collections import namedtuple
+Nstu, names, avmarks = int(input()), namedtuple('names', input()), []
+for x in range(Nstu): 
+    marks = int(names(*input().split()).MARKS)
+    avmarks.append(marks)
+print("{:.2f}".format(sum(avmarks)/Nstu))
