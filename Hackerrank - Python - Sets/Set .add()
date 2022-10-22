@@ -1,0 +1,5 @@
+tot = int(input())
+s = set()
+for x in range(tot):
+    s.add(input().strip())
+print(len(s))
